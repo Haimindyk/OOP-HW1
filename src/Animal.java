@@ -29,6 +29,14 @@ abstract public class Animal {
         this.frightened = frightened;
     }
 
+    public boolean isMammals() {
+        return mammals;
+    }
+
+    public boolean isCarnivorous() {
+        return carnivorous;
+    }
+
     @Override
     public String toString() {
         return "Animal{" +
