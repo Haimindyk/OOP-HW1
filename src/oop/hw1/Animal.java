@@ -1,50 +1,36 @@
 package oop.hw1;
 
 
+
 abstract public class Animal {
 
     //state
-    private boolean isMammals;
-    private boolean isCarnivorous;
-
-    private String mood;
-
+    private boolean isMammals; // Define if the object is mammals
+    private boolean isCarnivorous; // Define if the object is carnivorous
+    protected MoodAnimal mood; // Define the mood of the object, the option is on enum MoodAnimal
 
 
-
-
-    //ctor
+    //ctor - isMammals and isCarnivorous are mandatory fields ,mood defined to null by default
     public Animal(boolean isMammals ,boolean isCarnivorous) {
         this.isCarnivorous=isCarnivorous;
         this.isMammals=isMammals;
+        this.mood=MoodAnimal.NULL;
     }
 
-    public abstract void sayHello();
 
-    // set mood is only to Happy or Scare
-
-    public void setMoodToHappy() {
-        this.mood = "Happy";
+    // Set MoodAnimal(Enum) to mood happy or mood scare
+    public void setMoodHappy(){
+        this.mood = MoodAnimal.MOOD_HAPPY;
     }
 
-    public void setMoodToScare() {
-        this.mood = "Scare";
+    public void setMoodScare(){
+        this.mood= MoodAnimal.MOOD_SCARE;
     }
 
-    //getters
 
 
-    public String getMood() {
-        return mood;
-    }
-
-    public boolean isMammals() {
-        return isMammals;
-    }
-
-    public boolean isCarnivorous() {
-        return isCarnivorous;
-    }
+    //methods
+    public abstract void sayHello(); // make the object say hello , abstract because every object say hello different
 
 
     @Override
@@ -53,7 +39,7 @@ abstract public class Animal {
                 ", isCarnivorous=" + isCarnivorous +
                 ", Mood: " + mood +
                 ", ";
-    }
+    }//toString -return the state of the animal state
 }
 
 

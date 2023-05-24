@@ -7,47 +7,37 @@ public class Main {
         Cat micki = new Cat();
         Frog klark = new Frog();
 
-
+        System.out.println("Dog -Shocko:");
         shocko.sayHello();
-        shocko.setMoodToHappy();
-        shocko.actHappy();
-        shocko.actScared();
-        System.out.println(shocko);
+        shocko.actMood();
+        shocko.setMoodScare();
+        shocko.actMood();
+        shocko.setMoodHappy();
+        shocko.actMood();
+        System.out.println(shocko.getNumOfLegs());
+        System.out.println();
 
-        System.out.println("___________");
-
-        klark.sayHello();
-        klark.setMoodToHappy();
-        klark.actHappy();
-        klark.setMoodToScare();
-        klark.actScared();
-        System.out.println(klark);
-
-        System.out.println("___________");
-
+        System.out.println("Cat -Micki:");
         micki.sayHello();
-        micki.setMoodToHappy();
-        micki.actHappy();
-        micki.setMoodToScare();
-        System.out.println(micki);
+        micki.actMood();
+        micki.setMoodScare();
+        micki.actMood();
+        micki.setMoodHappy();
+        micki.actMood();
+        System.out.println(micki.getNumOfLegs());
+        System.out.println();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        System.out.println("Frog -Klark:");
+        klark.sayHello();
+        klark.actMood();
+        klark.setMoodScare();
+        klark.actMood();
+        klark.setMoodHappy();
+        klark.actMood();
+        System.out.println(klark.getNumOfLegs());
+        System.out.println(klark.hasGills());
+        System.out.println(klark.hasLaysEggs());
 
 
     }
-
 }
